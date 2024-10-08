@@ -1,6 +1,6 @@
 # Godot-Lab-3
 
-## Overview
+### Overview
 
 This is the third lab of the video game design. The intent is to get more comfortable with group work using git. 
 
