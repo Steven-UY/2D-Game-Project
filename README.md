@@ -13,3 +13,5 @@ This is the third lab of the video game design. The intent is to get more comfor
   - [ ] Make an instance of that scene in main
   - [ ] Commit and push their changes to the repository
 - [ ] At least one branch
+
+This is Tianyi Fan. 10/09/2024
