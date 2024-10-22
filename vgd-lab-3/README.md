@@ -19,7 +19,7 @@ adding an extra layer of strategy as you balance treasure hunting with
 survival.
 
 - **Avoid Dangerous Sea Creatures**:Beware of the ocean’s many threats! 
-Avoid dangerous creatures like sharks, jellyfish, and more as you 
+Avoid dangerous creatures like sharks, jellyfish, and more as fsfs 
 explore the depths.
 
 - **Time Pressure**: Each level has a time limit. The game ends if time 
