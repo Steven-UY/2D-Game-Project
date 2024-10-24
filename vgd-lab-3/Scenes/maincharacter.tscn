@@ -1,8 +1,8 @@
 [gd_scene load_steps=23 format=3 uid="uid://dxit73cog5ja2"]
 
-[ext_resource type="Texture2D" uid="uid://dspyvc8nw0rvp" path="res://2 GraveRobber/Idle.png" id="1_trrch"]
-[ext_resource type="Texture2D" uid="uid://d27ffqsvswmqs" path="res://2 GraveRobber/Swim.png" id="2_e8yu6"]
-[ext_resource type="Texture2D" uid="uid://dvjkxhdqv7b63" path="res://2 GraveRobber/Swim2.png" id="3_wrbo7"]
+[ext_resource type="Texture2D" uid="uid://dspyvc8nw0rvp" path="res://Assets/2 GraveRobber/Idle.png" id="1_trrch"]
+[ext_resource type="Texture2D" uid="uid://d27ffqsvswmqs" path="res://Assets/2 GraveRobber/Swim.png" id="2_e8yu6"]
+[ext_resource type="Texture2D" uid="uid://dvjkxhdqv7b63" path="res://Assets/2 GraveRobber/Swim2.png" id="3_wrbo7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p8hdq"]
 atlas = ExtResource("1_trrch")

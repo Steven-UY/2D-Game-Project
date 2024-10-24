@@ -1,6 +1,6 @@
 #TODO
 
-- [ ] Implement controls for swimming and resurfacing to air
+- [ ] Implement swimming movement mechanic
 - [ ] Setup the level(prototype)
 - [ ] Add the currency make them collectable
 - [ ] Enemies

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvjkxhdqv7b63"
-path="res://.godot/imported/Swim2.png-f7ccd59918783540de08986f040a1aea.ctex"
+uid="uid://dspyvc8nw0rvp"
+path="res://.godot/imported/Idle.png-5544c75862f0766c4b21f45ae51a9aba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://2 GraveRobber/Swim2.png"
-dest_files=["res://.godot/imported/Swim2.png-f7ccd59918783540de08986f040a1aea.ctex"]
+source_file="res://Assets/2 GraveRobber/Idle.png"
+dest_files=["res://.godot/imported/Idle.png-5544c75862f0766c4b21f45ae51a9aba.ctex"]
 
 [params]
 
