@@ -2,7 +2,7 @@
 extends CharacterBody2D
 
 # Constants for movement
-const SWIM_SPEED = 150  # Adjust this value to make swimming slower
+const SWIM_SPEED = 700  # Adjust this value to make swimming slower
 const DRAG = 0.9  # Simulates water resistance (higher value means less inertia)
 const BUOYANCY = -30  # Buoyancy to slowly pull player upward when idle
 
@@ -11,13 +11,13 @@ func _physics_process(delta):
 	# Get player input
 	var input_direction = Vector2.ZERO
 	if Input.is_action_pressed("move_right"):
-		input_direction.x += 1
+		input_direction.x += 20
 	if Input.is_action_pressed("move_left"):
-		input_direction.x -= 1
+		input_direction.x -= 20
 	if Input.is_action_pressed("move_down"):
-		input_direction.y += 1
+		input_direction.y += 20
 	if Input.is_action_pressed("move_up"):
-		input_direction.y -= 1
+		input_direction.y -= 20
 
 	# Normalize input direction to prevent diagonal speed boost(check docs)
 	if input_direction.length() > 0:
