@@ -1,6 +1,6 @@
 #TODO
 
-- [ ] Implement swimming movement mechanic
+- [X] Implement swimming movement mechanic
 - [ ] Setup the level(prototype)
 - [ ] Add the currency make them collectable
 - [ ] Enemies
