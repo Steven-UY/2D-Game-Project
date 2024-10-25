@@ -261,19 +261,16 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Node2D" type="Node2D"]
-position = Vector2(282, 215)
-scale = Vector2(1.5, 1.5)
-
-[node name="red fish" type="CharacterBody2D" parent="."]
+[node name="red fish" type="CharacterBody2D"]
+position = Vector2(73, 122)
 scale = Vector2(1.5, 1.5)
 script = SubResource("GDScript_3j1w0")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="red fish"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(1.5, 1.5)
 shape = SubResource("CircleShape2D_pau4e")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="red fish"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_yitbs")
 animation = &"new_animation_2"
