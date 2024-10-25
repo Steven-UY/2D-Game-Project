@@ -1,0 +1,142 @@
+[gd_scene load_steps=20 format=3 uid="uid://bsd5tstl0pu0g"]
+
+[ext_resource type="Script" path="res://Scenes/chest.gd" id="1_xdum8"]
+[ext_resource type="Texture2D" uid="uid://dkjeyqfn2w3ib" path="res://Assets/Treasures/treasure chests.png" id="2_nywjt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yfdrr"]
+atlas = ExtResource("2_nywjt")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwko0"]
+atlas = ExtResource("2_nywjt")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dpjv0"]
+atlas = ExtResource("2_nywjt")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r04tc"]
+atlas = ExtResource("2_nywjt")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujp1e"]
+atlas = ExtResource("2_nywjt")
+region = Rect2(64, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s27sw"]
+atlas = ExtResource("2_nywjt")
+region = Rect2(64, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hjql3"]
+atlas = ExtResource("2_nywjt")
+region = Rect2(64, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_puywt"]
+atlas = ExtResource("2_nywjt")
+region = Rect2(64, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jyfij"]
+atlas = ExtResource("2_nywjt")
+region = Rect2(64, 256, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4af2j"]
+atlas = ExtResource("2_nywjt")
+region = Rect2(64, 288, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_npj75"]
+atlas = ExtResource("2_nywjt")
+region = Rect2(64, 320, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iponi"]
+atlas = ExtResource("2_nywjt")
+region = Rect2(64, 352, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_omwyx"]
+atlas = ExtResource("2_nywjt")
+region = Rect2(64, 384, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dhn50"]
+atlas = ExtResource("2_nywjt")
+region = Rect2(64, 416, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uys8e"]
+atlas = ExtResource("2_nywjt")
+region = Rect2(64, 448, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wh7b4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yfdrr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwko0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dpjv0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r04tc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujp1e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s27sw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hjql3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_puywt")
+}],
+"loop": false,
+"name": &"Open",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jyfij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4af2j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_npj75")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iponi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_omwyx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dhn50")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uys8e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lfv7g"]
+
+[node name="Treasure" type="Node2D"]
+script = ExtResource("1_xdum8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(238, 182)
+scale = Vector2(6.5625, 5.9375)
+sprite_frames = SubResource("SpriteFrames_wh7b4")
+animation = &"Open"
+frame = 7
+frame_progress = 1.0
+
+[node name="Area2D" type="Area2D" parent="AnimatedSprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D"]
+shape = SubResource("CircleShape2D_lfv7g")
+
+[connection signal="body_entered" from="AnimatedSprite2D/Area2D" to="." method="_on_area_2d_body_entered"]
