@@ -1,0 +1,87 @@
+[gd_scene load_steps=13 format=3 uid="uid://bhm1hfy3liei3"]
+
+[ext_resource type="Script" path="res://swordfish.gd" id="1_4d65o"]
+[ext_resource type="Texture2D" uid="uid://bwyfvdrejvdl0" path="res://Assets/SpearFishing Assets Pack/Sprites/SwordFish - 48x32/SwordFish.png" id="2_5wc13"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n48o6"]
+atlas = ExtResource("2_5wc13")
+region = Rect2(0, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_htnj3"]
+atlas = ExtResource("2_5wc13")
+region = Rect2(48, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fegvo"]
+atlas = ExtResource("2_5wc13")
+region = Rect2(96, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t0fdb"]
+atlas = ExtResource("2_5wc13")
+region = Rect2(144, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6xiii"]
+atlas = ExtResource("2_5wc13")
+region = Rect2(192, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhqi1"]
+atlas = ExtResource("2_5wc13")
+region = Rect2(240, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sfm4k"]
+atlas = ExtResource("2_5wc13")
+region = Rect2(288, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_68s8v"]
+atlas = ExtResource("2_5wc13")
+region = Rect2(336, 0, 48, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iwcrn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n48o6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_htnj3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fegvo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0fdb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6xiii")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhqi1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sfm4k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_68s8v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v2l8p"]
+size = Vector2(44.375, 24)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="swordfish" type="CharacterBody2D" parent="."]
+script = ExtResource("1_4d65o")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="swordfish"]
+position = Vector2(65, 129)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_iwcrn")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="swordfish"]
+position = Vector2(67, 128)
+scale = Vector2(2.5, 2.5)
+shape = SubResource("RectangleShape2D_v2l8p")
