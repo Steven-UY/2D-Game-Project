@@ -1,0 +1,142 @@
+[gd_scene load_steps=21 format=3 uid="uid://gwb5v2pyr6hl"]
+
+[ext_resource type="Script" path="res://Scripts/sawshark.gd" id="1_1cvx4"]
+[ext_resource type="Texture2D" uid="uid://bgpuuctfwxpyn" path="res://Assets/SpearFishing Assets Pack/Sprites/SawShark - 48x32/SawShark.png" id="2_8ab2k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5yp85"]
+atlas = ExtResource("2_8ab2k")
+region = Rect2(0, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hg1fi"]
+atlas = ExtResource("2_8ab2k")
+region = Rect2(48, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1648w"]
+atlas = ExtResource("2_8ab2k")
+region = Rect2(96, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kitt5"]
+atlas = ExtResource("2_8ab2k")
+region = Rect2(144, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_teg1n"]
+atlas = ExtResource("2_8ab2k")
+region = Rect2(192, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3e4q6"]
+atlas = ExtResource("2_8ab2k")
+region = Rect2(240, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2w757"]
+atlas = ExtResource("2_8ab2k")
+region = Rect2(288, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28ixy"]
+atlas = ExtResource("2_8ab2k")
+region = Rect2(336, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7xryw"]
+atlas = ExtResource("2_8ab2k")
+region = Rect2(0, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3342"]
+atlas = ExtResource("2_8ab2k")
+region = Rect2(48, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5a1t3"]
+atlas = ExtResource("2_8ab2k")
+region = Rect2(96, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8611"]
+atlas = ExtResource("2_8ab2k")
+region = Rect2(144, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_li6sb"]
+atlas = ExtResource("2_8ab2k")
+region = Rect2(192, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ehsh"]
+atlas = ExtResource("2_8ab2k")
+region = Rect2(240, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2n26"]
+atlas = ExtResource("2_8ab2k")
+region = Rect2(288, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4td26"]
+atlas = ExtResource("2_8ab2k")
+region = Rect2(336, 32, 48, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3imen"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5yp85")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hg1fi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1648w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kitt5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_teg1n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3e4q6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2w757")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28ixy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7xryw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3342")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5a1t3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q8611")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_li6sb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ehsh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l2n26")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4td26")
+}],
+"loop": true,
+"name": &"saw shark moving",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p6hee"]
+size = Vector2(133, 46)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_1cvx4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(64, 151)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_3imen")
+animation = &"saw shark moving"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(63.5, 151)
+shape = SubResource("RectangleShape2D_p6hee")
