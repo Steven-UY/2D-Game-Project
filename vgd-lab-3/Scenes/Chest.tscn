@@ -142,7 +142,6 @@ script = ExtResource("1_xdum8")
 position = Vector2(196, 217.5)
 scale = Vector2(3.9375, 3.71875)
 sprite_frames = SubResource("SpriteFrames_wh7b4")
-animation = &"opened"
 
 [node name="Area2D" type="Area2D" parent="AnimatedSprite2D"]
 

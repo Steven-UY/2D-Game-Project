@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2uc5qb7mkgqm"]
+[gd_scene load_steps=3 format=3 uid="uid://d2uc5qb7mkgqm"]
 
 [ext_resource type="PackedScene" uid="uid://w7ty1bnhv1ri" path="res://Scenes/maincharacter.tscn" id="1_7pvni"]
+[ext_resource type="PackedScene" uid="uid://bsd5tstl0pu0g" path="res://Scenes/Chest.tscn" id="2_ln8gr"]
 
 [node name="Main" type="Node2D"]
 
 [node name="Maincharacter" parent="." instance=ExtResource("1_7pvni")]
 position = Vector2(65, 65)
+
+[node name="Treasure" parent="." instance=ExtResource("2_ln8gr")]
