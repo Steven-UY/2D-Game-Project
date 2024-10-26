@@ -5,10 +5,24 @@
 [sub_resource type="GDScript" id="GDScript_3j1w0"]
 script/source = "extends CharacterBody2D
 
+var speed = 150
+var direction: int = 1  # 1 for right, -1 for left
 
-#delta parameter allows behaviour to be unchanged with framerate(check docs)
-func _physics_process(delta):
+func _ready() -> void:
 	pass
+
+func _process(delta: float) -> void:
+	# Update horizontal position directly
+	position.x += direction * speed * delta
+
+	# Flip the sprite based on direction
+	
+	# Debug output
+	# print(\"Fish Position: \", position)
+
+	# Edge detection
+	if position.x < 0 or position.x > get_viewport_rect().size.x:
+		direction *= -1  # Reverse direction
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pau4e"]
@@ -144,21 +158,6 @@ region = Rect2(112, 48, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yitbs"]
 animations = [{
-"frames": [],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"new_animation",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"new_animation_1",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_45tf0")
@@ -257,21 +256,20 @@ animations = [{
 "texture": SubResource("AtlasTexture_gfjtf")
 }],
 "loop": true,
-"name": &"new_animation_2",
+"name": &"moving",
 "speed": 5.0
 }]
 
 [node name="red fish" type="CharacterBody2D"]
 position = Vector2(73, 122)
-scale = Vector2(1.5, 1.5)
+scale = Vector2(2.5, 2.5)
 script = SubResource("GDScript_3j1w0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(1.5, 1.5)
+scale = Vector2(2.5, 2.5)
 shape = SubResource("CircleShape2D_pau4e")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(1.5, 1.5)
+scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_yitbs")
-animation = &"new_animation_2"
-frame_progress = 0.988485
+animation = &"moving"
