@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b6ci525q6np6a" path="res://Assets/SpearFishing Assets Pack/Sprites/Diver-32x32/Diver 6.png" id="2_mwdpp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sv6ls"]
-size = Vector2(4, 7)
+size = Vector2(12, 29)
 
 [sub_resource type="Animation" id="Animation_kvomh"]
 resource_name = "swim_up"
@@ -13,7 +13,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("SpriteUp:frame")
+tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -28,7 +28,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("SpriteUp:frame")
+tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -48,18 +48,19 @@ _data = {
 collision_layer = 2
 script = ExtResource("1_pmeiv")
 
-[node name="SpriteUp" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(-3.8147e-06, 1)
 rotation = 1.5708
-scale = Vector2(0.234375, 0.242188)
+scale = Vector2(1, 1.034)
 texture = ExtResource("2_mwdpp")
 hframes = 7
 vframes = 4
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1.5)
+position = Vector2(-0.5, 2)
+rotation = 1.5708
 shape = SubResource("RectangleShape2D_sv6ls")
 
 [node name="Camera2D" type="Camera2D" parent="."]

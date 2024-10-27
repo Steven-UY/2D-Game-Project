@@ -1,13 +1,15 @@
 #inherits from CharacterBody2D class
 extends CharacterBody2D
 
+# Reference to the PlayerAnimation node
+@onready var player_animation = $PlayerAnimation
+@export var rotation_speed: float = TAU * 2
+@onready var collision_shape = $CollisionShape2D  # Reference to CollisionShape2D node
+
 # Constants for movement
 const SWIM_SPEED = 1000  # Adjust this value to make swimming slower
 const DRAG = 0.9  # Simulates water resistance (higher value means less inertia)
 const BUOYANCY = -30  # Buoyancy to slowly pull player upward when idle
-
-# Reference to the PlayerAnimation node
-@onready var player_animation = $PlayerAnimation
 
 func _ready():
 	# Automatically play the swim animation when the player spawns
@@ -29,8 +31,9 @@ func _physics_process(delta):
 	if Input.is_action_pressed("move_up"):
 		input_direction.y -= 20
 		rotation_degrees = -90  # Rotate upward
-
-	# left key -> down right key -> up down key -> right upkey -> left
+		
+# Update collision shape rotation to match the character's rotation
+	collision_shape.rotation_degrees = rotation_degrees
 
 	# Normalize input direction to prevent diagonal speed boost(check docs)
 	if input_direction.length() > 0:
