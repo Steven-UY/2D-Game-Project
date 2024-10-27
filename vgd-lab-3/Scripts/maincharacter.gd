@@ -2,7 +2,7 @@
 extends CharacterBody2D
 
 # Constants for movement
-const SWIM_SPEED = 700  # Adjust this value to make swimming slower
+const SWIM_SPEED = 1000  # Adjust this value to make swimming slower
 const DRAG = 0.9  # Simulates water resistance (higher value means less inertia)
 const BUOYANCY = -30  # Buoyancy to slowly pull player upward when idle
 

@@ -4,14 +4,25 @@
 [ext_resource type="Script" path="res://Scripts/maincharacter.gd" id="1_pmeiv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sv6ls"]
-size = Vector2(118, 115)
+size = Vector2(28, 28.75)
 
 [node name="Maincharacter" type="CharacterBody2D"]
+collision_layer = 2
 script = ExtResource("1_pmeiv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3.8147e-06, 1)
+scale = Vector2(0.234375, 0.242188)
 texture = ExtResource("1_0foge")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -0.5)
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_sv6ls")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-3.8147e-06, 1)
+scale = Vector2(0.234375, 0.242188)
+zoom = Vector2(4, 4)
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 3.0
