@@ -1,7 +1,7 @@
 [gd_scene load_steps=21 format=3 uid="uid://luodlgyojkqk"]
 
 [ext_resource type="Texture2D" uid="uid://dt8qnwf4e6vyl" path="res://Assets/SpearFishing Assets Pack/Sprites/Shark - 32x32/Shark.png" id="1_0vfjq"]
-[ext_resource type="Script" path="res://bigshark.gd" id="1_hwd7e"]
+[ext_resource type="Script" path="res://Scripts/bigshark.gd" id="1_hwd7e"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jkvl0"]
 atlas = ExtResource("1_0vfjq")
@@ -118,29 +118,27 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_22ath")
 }],
-"loop": false,
+"loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3psrr"]
-size = Vector2(32, 20)
+size = Vector2(35.4053, 20.449)
 
-[node name="Node2D" type="Node2D"]
-position = Vector2(97, 282)
-scale = Vector2(1.75, 1.75)
-
-[node name="bigshark" type="CharacterBody2D" parent="."]
-scale = Vector2(1.75, 1.75)
+[node name="bigshark" type="CharacterBody2D"]
+position = Vector2(62, 175)
+scale = Vector2(2.2, 2.2)
 script = ExtResource("1_hwd7e")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="bigshark"]
-scale = Vector2(2, 2)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2.2, 2.2)
 sprite_frames = SubResource("SpriteFrames_w0tu0")
 autoplay = "default"
 frame = 15
 frame_progress = 1.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="bigshark"]
-scale = Vector2(1.75, 1.75)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.97959, 0.392853)
+scale = Vector2(2.2, 2.2)
 shape = SubResource("RectangleShape2D_3psrr")
