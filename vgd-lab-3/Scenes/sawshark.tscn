@@ -124,7 +124,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p6hee"]
-size = Vector2(183, 62.5)
+size = Vector2(183, 88)
 
 [node name="Node2D" type="Node2D"]
 
@@ -132,12 +132,12 @@ size = Vector2(183, 62.5)
 script = ExtResource("1_1cvx4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
-position = Vector2(91, 235)
+position = Vector2(92, 158)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_3imen")
 animation = &"saw shark moving"
 autoplay = "saw shark moving"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(92, 236)
+position = Vector2(93, 154)
 shape = SubResource("RectangleShape2D_p6hee")
