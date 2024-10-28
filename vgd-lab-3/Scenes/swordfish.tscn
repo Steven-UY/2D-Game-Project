@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://bhm1hfy3liei3"]
 
-[ext_resource type="Script" path="res://swordfish.gd" id="1_4d65o"]
+[ext_resource type="Script" path="res://Scripts/swordfish.gd" id="1_4d65o"]
 [ext_resource type="Texture2D" uid="uid://bwyfvdrejvdl0" path="res://Assets/SpearFishing Assets Pack/Sprites/SwordFish - 48x32/SwordFish.png" id="2_5wc13"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n48o6"]
@@ -77,11 +77,11 @@ script = ExtResource("1_4d65o")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="swordfish"]
 position = Vector2(65, 129)
-scale = Vector2(2.5, 2.5)
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_iwcrn")
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="swordfish"]
 position = Vector2(67, 128)
-scale = Vector2(2.5, 2.5)
+scale = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_v2l8p")
