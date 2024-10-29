@@ -61,21 +61,24 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sun1g"]
-radius = 6.99849
+radius = 6.56387
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(305, 149)
 script = ExtResource("1_xej3m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(279, 133)
-scale = Vector2(30, 30)
+position = Vector2(146, 279.5)
+scale = Vector2(13.375, 12.7647)
 sprite_frames = SubResource("SpriteFrames_6574q")
 autoplay = "default"
-frame_progress = 0.552468
+frame = 4
+frame_progress = 0.991848
 
 [node name="Area2D" type="Area2D" parent="AnimatedSprite2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D"]
 position = Vector2(0.0333333, -0.6)
 shape = SubResource("CircleShape2D_sun1g")
+
+[connection signal="body_entered" from="AnimatedSprite2D/Area2D" to="." method="_on_area_2d_body_entered"]

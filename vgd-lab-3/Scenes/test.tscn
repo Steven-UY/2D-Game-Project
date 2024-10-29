@@ -1,7 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://r1iycj8ush4n"]
+[gd_scene load_steps=4 format=3 uid="uid://r1iycj8ush4n"]
 
 [ext_resource type="PackedScene" uid="uid://c4pnq5dxowywj" path="res://Scenes/SilverCoin.tscn" id="1_c7qbi"]
+[ext_resource type="PackedScene" uid="uid://bsd5tstl0pu0g" path="res://Scenes/Chest.tscn" id="3_2vcs2"]
+[ext_resource type="PackedScene" uid="uid://dcil12yvybgbb" path="res://Scenes/dummy_player.tscn" id="4_4a2od"]
 
 [node name="Test" type="Node2D"]
+position = Vector2(89, 71)
 
 [node name="SilverCoin" parent="." instance=ExtResource("1_c7qbi")]
+
+[node name="Treasure" parent="." instance=ExtResource("3_2vcs2")]
+
+[node name="DummyPlayer" parent="." instance=ExtResource("4_4a2od")]
+position = Vector2(94, 159)
