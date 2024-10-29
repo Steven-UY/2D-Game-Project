@@ -1,4 +1,0 @@
-[gd_scene format=3 uid="uid://c4pnq5dxowywj"]
-
-[node name="Coin" type="Node2D"]
-position = Vector2(306, 171)

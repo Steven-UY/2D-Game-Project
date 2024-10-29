@@ -6,6 +6,8 @@ const SWIM_SPEED = 700  # Adjust this value to make swimming slower
 const DRAG = 0.9  # Simulates water resistance (higher value means less inertia)
 const BUOYANCY = -30  # Buoyancy to slowly pull player upward when idle
 
+func _ready() -> void:
+	add_to_group("Player")
 #delta parameter allows behaviour to be unchanged with framerate(check docs)
 func _physics_process(delta):
 	# Get player input
