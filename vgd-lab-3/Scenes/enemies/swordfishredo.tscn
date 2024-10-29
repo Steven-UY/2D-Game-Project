@@ -1,0 +1,86 @@
+[gd_scene load_steps=13 format=3 uid="uid://dmw87bxenan7d"]
+
+[ext_resource type="Script" path="res://Scripts/swordfishredo.gd" id="1_f0fsh"]
+[ext_resource type="Texture2D" uid="uid://bwyfvdrejvdl0" path="res://Assets/SpearFishing Assets Pack/Sprites/SwordFish - 48x32/SwordFish.png" id="2_4bw5u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lchrk"]
+atlas = ExtResource("2_4bw5u")
+region = Rect2(0, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qxfmq"]
+atlas = ExtResource("2_4bw5u")
+region = Rect2(48, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yn1si"]
+atlas = ExtResource("2_4bw5u")
+region = Rect2(96, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqmw1"]
+atlas = ExtResource("2_4bw5u")
+region = Rect2(144, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_baa8c"]
+atlas = ExtResource("2_4bw5u")
+region = Rect2(192, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_but7k"]
+atlas = ExtResource("2_4bw5u")
+region = Rect2(240, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_etxg1"]
+atlas = ExtResource("2_4bw5u")
+region = Rect2(288, 0, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ifi3v"]
+atlas = ExtResource("2_4bw5u")
+region = Rect2(336, 0, 48, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_56175"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lchrk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qxfmq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yn1si")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vqmw1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_baa8c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_but7k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_etxg1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ifi3v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_16b5q"]
+size = Vector2(49, 21)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_f0fsh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(41.5, 90)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_56175")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(41.5, 89)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_16b5q")

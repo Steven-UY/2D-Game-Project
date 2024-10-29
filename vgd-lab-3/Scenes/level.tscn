@@ -1,13 +1,9 @@
+[gd_scene load_steps=4 format=3 uid="uid://beu2st4ekaqty"]
 
-[gd_scene load_steps=11 format=4 uid="uid://d2uc5qb7mkgqm"]
+[ext_resource type="Texture2D" uid="uid://cvetad83cbiae" path="res://Assets/SpearFishing Assets Pack/Sprites/Tiles - 16x16/Sand.png" id="1_03muq"]
 
-[ext_resource type="Script" path="res://Scripts/main.gd" id="1_1fyf4"]
-[ext_resource type="PackedScene" uid="uid://w7ty1bnhv1ri" path="res://Scenes/maincharacter.tscn" id="1_7pvni"]
-[ext_resource type="Texture2D" uid="uid://cvetad83cbiae" path="res://Assets/SpearFishing Assets Pack/Sprites/Tiles - 16x16/Sand.png" id="3_m4bil"]
-[ext_resource type="PackedScene" uid="uid://d5rok5y3gjp1" path="res://Scenes/enemies/redfish.tscn" id="4_1navu"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xc1ia"]
-texture = ExtResource("3_m4bil")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pgki5"]
+texture = ExtResource("1_03muq")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
 1:0/0 = 0
@@ -212,56 +208,12 @@ texture = ExtResource("3_m4bil")
 2:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
 3:12/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_tu20l"]
+[sub_resource type="TileSet" id="TileSet_26q5n"]
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 2
-sources/0 = SubResource("TileSetAtlasSource_xc1ia")
+sources/0 = SubResource("TileSetAtlasSource_pgki5")
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_5dy8i"]
-radius = 8.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5less"]
-bg_color = Color(0.040736, 0.040736, 0.040736, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0gnl4"]
-bg_color = Color(0.880128, 0, 0.156276, 1)
-
-[sub_resource type="GDScript" id="GDScript_2lwol"]
-script/source = "extends ProgressBar
-"
-
-[node name="Main" type="Node2D"]
-
-[node name="Maincharacter" parent="." instance=ExtResource("1_7pvni")]
-
-position = Vector2(69, 95)
+[node name="Node2D" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAD4////AAACAAEAAAD4/wAAAAACAAEAAAD4/wEAAAACAAEAAAD4/wIAAAACAAEAAAD4/wMAAAACAAEAAAD4/wQAAAACAAEAAAD4/wUAAAACAAEAAAD4/wYAAAACAAEAAAD4/wcAAAACAAEAAAD4/wgAAAACAAEAAAD4/wkAAAACAAEAAAD4/woAAAACAAEAAAD4/wsAAAACAAEAAAD4/wwAAAACAAEAAAD4/w0AAAACAAEAAAD4/w4AAAACAAEAAAD5/w8AAAAIAAAAAAD6/w8AAAAIAAAAAAD7/w8AAAAIAAAAAAD8/w8AAAAIAAAAAAD8/w4AAAAIAAAAAAD9/w4AAAAIAAAAAAD+/w4AAAAIAAAAAAD+/w8AAAAIAAAAAAD//w8AAAAIAAAAAAAAAA8AAAAIAAAAAAABAA8AAAAIAAAAAAACAA8AAAAIAAAAAAADAA8AAAAIAAAAAAAEAA8AAAAIAAAAAAAFAA8AAAAIAAAAAAAGAA8AAAAIAAAAAAAHAA8AAAAIAAAAAAAIAA8AAAAIAAAAAAAJAA8AAAAIAAAAAAAKAA8AAAAIAAAAAAALAA8AAAAIAAAAAAAMAA8AAAAIAAAAAAAMAA4AAAAIAAAAAAANAA4AAAAIAAAAAAAOAA4AAAAIAAAAAAAOAA8AAAAIAAAAAAAPAA8AAAAIAAAAAAAQAA8AAAAIAAAAAAARAA8AAAAIAAAAAAASAA8AAAAIAAAAAAASAA4AAAAIAAAAAAATAA4AAAAIAAAAAAATAA8AAAAIAAAAAAAUAA8AAAAIAAAAAAAVAA8AAAAIAAAAAAAVAA4AAAAIAAAAAAAVAA0AAAAIAAAAAAAVAAwAAAAIAAAAAAAVAAsAAAAIAAAAAAAVAAoAAAAIAAAAAAAVAAkAAAAIAAAAAAAVAAgAAAAIAAAAAAAVAAcAAAAIAAAAAAAVAAYAAAAIAAAAAAAVAAUAAAAIAAAAAAAVAAQAAAAIAAAAAAAVAAMAAAAIAAAAAAAVAAIAAAAIAAAAAAAVAAEAAAAIAAAAAAAVAAAAAAAIAAAAAAAVAP//AAAIAAAAAAA=")
-tile_set = SubResource("TileSet_tu20l")
-
-[node name="red fish" parent="." instance=ExtResource("4_1navu")]
-collision_mask = 1
-
-[node name="Area2D" type="Area2D" parent="red fish"]
-collision_layer = 4
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="red fish/Area2D"]
-shape = SubResource("CircleShape2D_5dy8i")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
-offset_left = 30.0
-offset_top = 21.0
-offset_right = 285.0
-offset_bottom = 52.0
-theme_override_styles/background = SubResource("StyleBoxFlat_5less")
-theme_override_styles/fill = SubResource("StyleBoxFlat_0gnl4")
-max_value = 10.0
-value = 5.0
-show_percentage = false
-script = SubResource("GDScript_2lwol")
-
-[connection signal="body_entered" from="red fish/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
+tile_set = SubResource("TileSet_26q5n")
