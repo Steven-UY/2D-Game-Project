@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c53u704i4lblb"]
+
+[ext_resource type="PackedScene" uid="uid://bsd5tstl0pu0g" path="res://Scenes/Chest.tscn" id="1_jc3u1"]
+[ext_resource type="PackedScene" uid="uid://dcil12yvybgbb" path="res://Scenes/dummy_player.tscn" id="2_axr00"]
+
+[node name="Test" type="Node2D"]
+
+[node name="Treasure" parent="." instance=ExtResource("1_jc3u1")]
+
+[node name="DummyPlayer" parent="." instance=ExtResource("2_axr00")]
+position = Vector2(114, 182)

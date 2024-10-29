@@ -64,12 +64,13 @@ animations = [{
 radius = 6.56387
 
 [node name="Node2D" type="Node2D"]
-position = Vector2(305, 149)
+position = Vector2(142, -19)
+scale = Vector2(0.4, 0.4)
 script = ExtResource("1_xej3m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(146, 279.5)
-scale = Vector2(13.375, 12.7647)
+scale = Vector2(13.96, 13.323)
 sprite_frames = SubResource("SpriteFrames_6574q")
 autoplay = "default"
 frame = 4
