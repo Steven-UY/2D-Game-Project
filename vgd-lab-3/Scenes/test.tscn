@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://r1iycj8ush4n"]
+
+[ext_resource type="PackedScene" uid="uid://c4pnq5dxowywj" path="res://Scenes/SilverCoin.tscn" id="1_c7qbi"]
+
+[node name="Test" type="Node2D"]
+
+[node name="SilverCoin" parent="." instance=ExtResource("1_c7qbi")]

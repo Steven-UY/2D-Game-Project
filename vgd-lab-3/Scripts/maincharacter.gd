@@ -18,13 +18,13 @@ func _ready():
 	# Automatically play the swim animation when the player spawns
 	player_animation.play("swim_up")  # Replace "swim_up" with your animation name
 	health_bar.value = HP
-	
+	add_to_group("Player")
 func healthDown():
 	HP -= 1
 	health_bar.value = HP
 
-func _ready() -> void:
-	add_to_group("Player")
+
+
 #delta parameter allows behaviour to be unchanged with framerate(check docs)
 func _physics_process(delta):
 	# Get player input
