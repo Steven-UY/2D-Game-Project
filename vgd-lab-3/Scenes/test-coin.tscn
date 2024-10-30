@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://7xt1xfpko2fp"]
+
+[ext_resource type="PackedScene" uid="uid://w7ty1bnhv1ri" path="res://Scenes/maincharacter.tscn" id="1_nbm3m"]
+[ext_resource type="Script" path="res://Scripts/test.gd" id="2_n872u"]
+[ext_resource type="PackedScene" uid="uid://cik2efxqt8msw" path="res://Scenes/GoldCoin.tscn" id="3_hobcl"]
+
+[node name="Test" type="Node2D"]
+
+[node name="Maincharacter" parent="." instance=ExtResource("1_nbm3m")]
+collision_mask = 13
+script = ExtResource("2_n872u")
+
+[node name="goldcoin" parent="." instance=ExtResource("3_hobcl")]
+scale = Vector2(0.07, 0.07)

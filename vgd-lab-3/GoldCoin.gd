@@ -7,10 +7,10 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(delta) -> void:
 	pass
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.is_in_group('Player'):
-		pass
-		#queue_free()
+func _on_area_2d_body_entered(_body: CharacterBody2D) -> void:
+	if _body.is_in_group('Player'):
+		Global.add_score(5)
+		queue_free()

@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://c4pnq5dxowywj"]
 
-[ext_resource type="Script" path="res://Scenes/silver_coin.gd" id="1_2bfnv"]
+[ext_resource type="Script" path="res://Scripts/silver_coin.gd" id="1_2bfnv"]
 [ext_resource type="Texture2D" uid="uid://d1xovo8blsa2l" path="res://Assets/coins-chests-etc-2-0-noborders.png" id="2_or3o1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6m621"]
