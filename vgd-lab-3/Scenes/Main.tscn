@@ -267,8 +267,15 @@ show_percentage = false
 script = SubResource("GDScript_2lwol")
 
 [node name="Score" type="Label" parent="HUD"]
-offset_right = 40.0
-offset_bottom = 23.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -60.0
+offset_top = 7.0
+offset_right = 1.0
+offset_bottom = 49.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 30
 script = ExtResource("5_k3wli")
 
 [connection signal="body_entered" from="RedFish/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]

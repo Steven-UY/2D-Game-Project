@@ -19,10 +19,16 @@ func _ready():
 	player_animation.play("swim_up")  # Replace "swim_up" with your animation name
 	health_bar.value = HP
 	add_to_group("Player")
+
+func gameOver():
+	# Optional: Play a death animation or sound here
+	get_tree().reload_current_scene()  # Reloads the current scene
+	
 func healthDown():
 	HP -= 1
 	health_bar.value = HP
-
+	if HP <= 0:
+		gameOver()
 
 
 #delta parameter allows behaviour to be unchanged with framerate(check docs)
