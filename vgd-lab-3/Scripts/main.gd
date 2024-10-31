@@ -13,6 +13,10 @@ func _on_all_coins_collected():
 	var win_screen = $WinScreen 
 	win_screen.visible = true
 	
+	var stopwatch = get_tree().get_first_node_in_group("stopwatch")
+	if stopwatch != null:
+		stopwatch.stop()
+		
 	# Optional: Disable player controls
 	var player = $Maincharacter  # Adjust the node path if necessary
 	player.set_physics_process(false)  # Stops the player's physics processing
