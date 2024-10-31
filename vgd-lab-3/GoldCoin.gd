@@ -14,5 +14,4 @@ func _on_area_2d_body_entered(_body: CharacterBody2D) -> void:
 	if _body.is_in_group('Player'):
 		Global.add_score(5)
 		Global.coins_collected()
-		Global.reset()
 		queue_free()
