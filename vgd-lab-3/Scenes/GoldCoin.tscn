@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://cik2efxqt8msw"]
+[gd_scene load_steps=13 format=3 uid="uid://cik2efxqt8msw"]
 
 [ext_resource type="Script" path="res://GoldCoin.gd" id="1_xej3m"]
 [ext_resource type="Texture2D" uid="uid://d1xovo8blsa2l" path="res://Assets/coins-chests-etc-2-0-noborders.png" id="2_5a407"]
+[ext_resource type="AudioStream" uid="uid://bvy6oiauuymfy" path="res://audio/coin-recieved-230517.mp3" id="3_62483"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xnc2q"]
 atlas = ExtResource("2_5a407")
@@ -75,6 +76,12 @@ sprite_frames = SubResource("SpriteFrames_6574q")
 autoplay = "default"
 frame = 4
 frame_progress = 0.991848
+
+[node name="coin audio" type="AudioStreamPlayer2D" parent="AnimatedSprite2D"]
+position = Vector2(-10.4585, -20.9788)
+scale = Vector2(0.0716332, 0.0750582)
+stream = ExtResource("3_62483")
+volume_db = 1.0
 
 [node name="Area2D" type="Area2D" parent="AnimatedSprite2D"]
 collision_layer = 8

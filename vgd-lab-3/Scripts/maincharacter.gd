@@ -26,11 +26,11 @@ func gameOver():
 	# Reload the scene
 	get_tree().reload_current_scene()
 
-	
 func healthDown():
 	HP -= 1
 	health_bar.value = HP
 	if HP <= 0:
+		$"Death Audio".play()
 		gameOver()
 
 

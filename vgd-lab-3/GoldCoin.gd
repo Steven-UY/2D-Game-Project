@@ -14,4 +14,8 @@ func _on_area_2d_body_entered(_body: CharacterBody2D) -> void:
 	if _body.is_in_group('Player'):
 		Global.add_score(5)
 		Global.coins_collected()
+		Global.play_coin_audio()
 		queue_free()
+
+func play_coin_audio() -> void:
+	$"AnimatedSprite2D/coin audio".play()

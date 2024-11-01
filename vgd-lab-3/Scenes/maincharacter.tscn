@@ -1,7 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://w7ty1bnhv1ri"]
+[gd_scene load_steps=10 format=3 uid="uid://w7ty1bnhv1ri"]
 
 [ext_resource type="Script" path="res://Scripts/maincharacter.gd" id="1_pmeiv"]
 [ext_resource type="Texture2D" uid="uid://b6ci525q6np6a" path="res://Assets/SpearFishing Assets Pack/Sprites/Diver-32x32/Diver 6.png" id="2_mwdpp"]
+[ext_resource type="AudioStream" uid="uid://xde6tbfj22vm" path="res://audio/water-bubbles-257594.mp3" id="3_k37kx"]
+[ext_resource type="AudioStream" uid="uid://dcpnlmowd60yf" path="res://audio/086398_game-die-81356.mp3" id="4_0myur"]
+[ext_resource type="AudioStream" uid="uid://sbl5bvcul4vj" path="res://audio/maringa-conga-246609.mp3" id="4_6aqf4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sv6ls"]
 size = Vector2(12, 29)
@@ -77,4 +80,15 @@ libraries = {
 "": SubResource("AnimationLibrary_gtqqa")
 }
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="Bubble Audio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_k37kx")
+pitch_scale = 0.5
+autoplay = true
+
+[node name="Background Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_6aqf4")
+volume_db = 1.0
+autoplay = true
+
+[node name="Death Audio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_0myur")
