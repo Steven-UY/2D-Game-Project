@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://d2uc5qb7mkgqm"]
+[gd_scene load_steps=22 format=3 uid="uid://d2uc5qb7mkgqm"]
 
 [ext_resource type="PackedScene" uid="uid://w7ty1bnhv1ri" path="res://Scenes/maincharacter.tscn" id="1_7pvni"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_w20rv"]
@@ -9,7 +9,12 @@
 [ext_resource type="PackedScene" uid="uid://b5bslr4yfuj6x" path="res://Scenes/enemies/jellyfish.tscn" id="6_0hpgi"]
 [ext_resource type="Script" path="res://Scripts/HUD.gd" id="6_a1uws"]
 [ext_resource type="PackedScene" uid="uid://cmxkovfbqw8m" path="res://win-screen.tscn" id="7_q2ljo"]
+[ext_resource type="PackedScene" uid="uid://dmw87bxenan7d" path="res://Scenes/enemies/swordfishredo.tscn" id="8_f0mw1"]
 [ext_resource type="PackedScene" uid="uid://beu2st4ekaqty" path="res://Scenes/level.tscn" id="9_k863x"]
+[ext_resource type="PackedScene" uid="uid://luodlgyojkqk" path="res://Scenes/enemies/bigshark.tscn" id="12_b4ec2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ogidt"]
+size = Vector2(1551, 20)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5dy8i"]
 radius = 8.0
@@ -30,11 +35,27 @@ bg_color = Color(0.880128, 0, 0.156276, 1)
 script/source = "extends ProgressBar
 "
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6h8jn"]
+size = Vector2(64, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wdbe2"]
+size = Vector2(55, 35.3333)
+
 [node name="Main" type="Node2D"]
 script = ExtResource("1_w20rv")
 
 [node name="Maincharacter" parent="." instance=ExtResource("1_7pvni")]
-position = Vector2(53, 33)
+position = Vector2(103, 31)
+scale = Vector2(1, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(780, -21)
+shape = SubResource("RectangleShape2D_ogidt")
+
+[node name="level" parent="." instance=ExtResource("9_k863x")]
 
 [node name="Stopwatch" parent="." instance=ExtResource("3_7vush")]
 
@@ -55,6 +76,28 @@ position = Vector2(-21, 390)
 
 [node name="GoldCoin6" parent="." instance=ExtResource("2_06mf6")]
 position = Vector2(232, 360)
+
+[node name="GoldCoin7" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(487, 21)
+
+[node name="GoldCoin8" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(781, 162)
+
+[node name="GoldCoin9" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(980, 35)
+
+[node name="GoldCoin10" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(1080, 187)
+
+[node name="GoldCoin11" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(1130, 377)
+scale = Vector2(0.05, 0.05)
+
+[node name="GoldCoin12" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(1390, 75)
+
+[node name="GoldCoin13" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(1451, 298)
 
 [node name="RedFish" parent="." instance=ExtResource("4_1navu")]
 position = Vector2(151, 181)
@@ -104,6 +147,138 @@ collision_mask = 3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RedFish4/Area2D"]
 shape = SubResource("CircleShape2D_5dy8i")
 
+[node name="RedFish5" parent="." instance=ExtResource("4_1navu")]
+position = Vector2(437, 477)
+scale = Vector2(2, 2)
+collision_mask = 1
+
+[node name="Area2D" type="Area2D" parent="RedFish5"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RedFish5/Area2D"]
+shape = SubResource("CircleShape2D_5dy8i")
+
+[node name="RedFish6" parent="." instance=ExtResource("4_1navu")]
+position = Vector2(591, 430)
+scale = Vector2(2, 2)
+collision_mask = 1
+
+[node name="Area2D" type="Area2D" parent="RedFish6"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RedFish6/Area2D"]
+shape = SubResource("CircleShape2D_5dy8i")
+
+[node name="RedFish7" parent="." instance=ExtResource("4_1navu")]
+position = Vector2(739, 469)
+scale = Vector2(2, 2)
+collision_mask = 1
+
+[node name="Area2D" type="Area2D" parent="RedFish7"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RedFish7/Area2D"]
+shape = SubResource("CircleShape2D_5dy8i")
+
+[node name="RedFish8" parent="." instance=ExtResource("4_1navu")]
+position = Vector2(860, 355)
+scale = Vector2(2, 2)
+collision_mask = 1
+
+[node name="Area2D" type="Area2D" parent="RedFish8"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RedFish8/Area2D"]
+shape = SubResource("CircleShape2D_5dy8i")
+
+[node name="RedFish9" parent="." instance=ExtResource("4_1navu")]
+position = Vector2(902, 170)
+scale = Vector2(2, 2)
+collision_mask = 1
+
+[node name="Area2D" type="Area2D" parent="RedFish9"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RedFish9/Area2D"]
+shape = SubResource("CircleShape2D_5dy8i")
+
+[node name="RedFish10" parent="." instance=ExtResource("4_1navu")]
+position = Vector2(1135, 301)
+scale = Vector2(2, 2)
+collision_mask = 1
+
+[node name="Area2D" type="Area2D" parent="RedFish10"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RedFish10/Area2D"]
+shape = SubResource("CircleShape2D_5dy8i")
+
+[node name="RedFish11" parent="." instance=ExtResource("4_1navu")]
+position = Vector2(1178, 133)
+scale = Vector2(2, 2)
+collision_mask = 1
+
+[node name="Area2D" type="Area2D" parent="RedFish11"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RedFish11/Area2D"]
+shape = SubResource("CircleShape2D_5dy8i")
+
+[node name="RedFish12" parent="." instance=ExtResource("4_1navu")]
+position = Vector2(1241, 409)
+scale = Vector2(2, 2)
+collision_mask = 1
+
+[node name="Area2D" type="Area2D" parent="RedFish12"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RedFish12/Area2D"]
+shape = SubResource("CircleShape2D_5dy8i")
+
+[node name="RedFish13" parent="." instance=ExtResource("4_1navu")]
+position = Vector2(744, 55)
+scale = Vector2(2, 2)
+collision_mask = 1
+
+[node name="Area2D" type="Area2D" parent="RedFish13"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RedFish13/Area2D"]
+shape = SubResource("CircleShape2D_5dy8i")
+
+[node name="RedFish14" parent="." instance=ExtResource("4_1navu")]
+position = Vector2(414, 82)
+scale = Vector2(2, 2)
+collision_mask = 1
+
+[node name="Area2D" type="Area2D" parent="RedFish14"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RedFish14/Area2D"]
+shape = SubResource("CircleShape2D_5dy8i")
+
+[node name="RedFish15" parent="." instance=ExtResource("4_1navu")]
+position = Vector2(1185, 36)
+scale = Vector2(2, 2)
+collision_mask = 1
+
+[node name="Area2D" type="Area2D" parent="RedFish15"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RedFish15/Area2D"]
+shape = SubResource("CircleShape2D_5dy8i")
+
 [node name="jellyfish" parent="." instance=ExtResource("6_0hpgi")]
 position = Vector2(29, 258)
 
@@ -139,19 +314,79 @@ collision_mask = 3
 position = Vector2(99, 52)
 shape = SubResource("RectangleShape2D_6hyu5")
 
+[node name="jellyfish4" parent="." instance=ExtResource("6_0hpgi")]
+position = Vector2(552, 78)
+
+[node name="Area2D2" type="Area2D" parent="jellyfish4"]
+position = Vector2(5, -5)
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jellyfish4/Area2D2"]
+position = Vector2(99, 52)
+shape = SubResource("RectangleShape2D_6hyu5")
+
+[node name="jellyfish5" parent="." instance=ExtResource("6_0hpgi")]
+position = Vector2(803, 47)
+
+[node name="Area2D2" type="Area2D" parent="jellyfish5"]
+position = Vector2(5, -5)
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jellyfish5/Area2D2"]
+position = Vector2(99, 52)
+shape = SubResource("RectangleShape2D_6hyu5")
+
+[node name="jellyfish6" parent="." instance=ExtResource("6_0hpgi")]
+position = Vector2(933, 212)
+
+[node name="Area2D2" type="Area2D" parent="jellyfish6"]
+position = Vector2(5, -5)
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jellyfish6/Area2D2"]
+position = Vector2(99, 52)
+shape = SubResource("RectangleShape2D_6hyu5")
+
+[node name="jellyfish7" parent="." instance=ExtResource("6_0hpgi")]
+position = Vector2(1218, 169)
+
+[node name="Area2D2" type="Area2D" parent="jellyfish7"]
+position = Vector2(5, -5)
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jellyfish7/Area2D2"]
+position = Vector2(99, 52)
+shape = SubResource("RectangleShape2D_6hyu5")
+
+[node name="jellyfish8" parent="." instance=ExtResource("6_0hpgi")]
+position = Vector2(1309, 333)
+
+[node name="Area2D2" type="Area2D" parent="jellyfish8"]
+position = Vector2(5, -5)
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jellyfish8/Area2D2"]
+position = Vector2(99, 52)
+shape = SubResource("RectangleShape2D_6hyu5")
+
 [node name="HUD" type="CanvasLayer" parent="." node_paths=PackedStringArray("stopwatch_label")]
 script = ExtResource("6_a1uws")
 stopwatch_label = NodePath("StopWatchLabel")
 
 [node name="ProgressBar" type="ProgressBar" parent="HUD"]
-offset_left = 30.0
-offset_top = 21.0
-offset_right = 285.0
-offset_bottom = 52.0
+offset_left = 23.0
+offset_top = 14.0
+offset_right = 278.0
+offset_bottom = 45.0
 theme_override_styles/background = SubResource("StyleBoxFlat_5less")
 theme_override_styles/fill = SubResource("StyleBoxFlat_0gnl4")
 max_value = 10.0
-value = 5.0
+value = 10.0
 show_percentage = false
 script = SubResource("GDScript_2lwol")
 
@@ -180,12 +415,415 @@ text = "00:00"
 
 [node name="WinScreen" parent="." instance=ExtResource("7_q2ljo")]
 
-[node name="level" parent="." instance=ExtResource("9_k863x")]
+[node name="jellyfish9" parent="." instance=ExtResource("6_0hpgi")]
+position = Vector2(819, 564)
+
+[node name="Area2D2" type="Area2D" parent="jellyfish9"]
+position = Vector2(5, -5)
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jellyfish9/Area2D2"]
+position = Vector2(99, 52)
+shape = SubResource("RectangleShape2D_6hyu5")
+
+[node name="swordfish" parent="." instance=ExtResource("8_f0mw1")]
+position = Vector2(387, 594)
+
+[node name="Area2D" type="Area2D" parent="swordfish"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="swordfish/Area2D"]
+position = Vector2(49, 89)
+shape = SubResource("RectangleShape2D_6h8jn")
+
+[node name="swordfish2" parent="." instance=ExtResource("8_f0mw1")]
+position = Vector2(503, 713)
+
+[node name="Area2D" type="Area2D" parent="swordfish2"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="swordfish2/Area2D"]
+position = Vector2(49, 89)
+shape = SubResource("RectangleShape2D_6h8jn")
+
+[node name="swordfish3" parent="." instance=ExtResource("8_f0mw1")]
+position = Vector2(1057, 567)
+
+[node name="Area2D" type="Area2D" parent="swordfish3"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="swordfish3/Area2D"]
+position = Vector2(49, 89)
+shape = SubResource("RectangleShape2D_6h8jn")
+
+[node name="swordfish4" parent="." instance=ExtResource("8_f0mw1")]
+position = Vector2(1270, 715)
+
+[node name="Area2D" type="Area2D" parent="swordfish4"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="swordfish4/Area2D"]
+position = Vector2(49, 89)
+shape = SubResource("RectangleShape2D_6h8jn")
+
+[node name="swordfish5" parent="." instance=ExtResource("8_f0mw1")]
+position = Vector2(163, 825)
+
+[node name="Area2D" type="Area2D" parent="swordfish5"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="swordfish5/Area2D"]
+position = Vector2(49, 89)
+shape = SubResource("RectangleShape2D_6h8jn")
+
+[node name="swordfish6" parent="." instance=ExtResource("8_f0mw1")]
+position = Vector2(751, 879)
+
+[node name="Area2D" type="Area2D" parent="swordfish6"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="swordfish6/Area2D"]
+position = Vector2(49, 89)
+shape = SubResource("RectangleShape2D_6h8jn")
+
+[node name="swordfish7" parent="." instance=ExtResource("8_f0mw1")]
+position = Vector2(949, 1015)
+
+[node name="Area2D" type="Area2D" parent="swordfish7"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="swordfish7/Area2D"]
+position = Vector2(49, 89)
+shape = SubResource("RectangleShape2D_6h8jn")
+
+[node name="swordfish8" parent="." instance=ExtResource("8_f0mw1")]
+position = Vector2(1550, 955)
+
+[node name="Area2D" type="Area2D" parent="swordfish8"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="swordfish8/Area2D"]
+position = Vector2(49, 89)
+shape = SubResource("RectangleShape2D_6h8jn")
+
+[node name="jellyfish10" parent="." instance=ExtResource("6_0hpgi")]
+position = Vector2(1058, 831)
+
+[node name="Area2D2" type="Area2D" parent="jellyfish10"]
+position = Vector2(5, -5)
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jellyfish10/Area2D2"]
+position = Vector2(99, 52)
+shape = SubResource("RectangleShape2D_6hyu5")
+
+[node name="jellyfish11" parent="." instance=ExtResource("6_0hpgi")]
+position = Vector2(476, 580)
+
+[node name="Area2D2" type="Area2D" parent="jellyfish11"]
+position = Vector2(5, -5)
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jellyfish11/Area2D2"]
+position = Vector2(99, 52)
+shape = SubResource("RectangleShape2D_6hyu5")
+
+[node name="jellyfish12" parent="." instance=ExtResource("6_0hpgi")]
+position = Vector2(339, 812)
+
+[node name="Area2D2" type="Area2D" parent="jellyfish12"]
+position = Vector2(5, -5)
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jellyfish12/Area2D2"]
+position = Vector2(99, 52)
+shape = SubResource("RectangleShape2D_6hyu5")
+
+[node name="jellyfish13" parent="." instance=ExtResource("6_0hpgi")]
+position = Vector2(1432, 827)
+
+[node name="Area2D2" type="Area2D" parent="jellyfish13"]
+position = Vector2(5, -5)
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jellyfish13/Area2D2"]
+position = Vector2(99, 52)
+shape = SubResource("RectangleShape2D_6hyu5")
+
+[node name="jellyfish14" parent="." instance=ExtResource("6_0hpgi")]
+position = Vector2(520, 1015)
+
+[node name="Area2D2" type="Area2D" parent="jellyfish14"]
+position = Vector2(5, -5)
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jellyfish14/Area2D2"]
+position = Vector2(99, 52)
+shape = SubResource("RectangleShape2D_6hyu5")
+
+[node name="GoldCoin14" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(516, 542)
+
+[node name="GoldCoin15" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(329, 635)
+
+[node name="GoldCoin16" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(232, 556)
+
+[node name="GoldCoin17" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(167, 720)
+
+[node name="GoldCoin18" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(548, 899)
+
+[node name="GoldCoin19" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(338, 966)
+
+[node name="GoldCoin20" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(762, 556)
+
+[node name="GoldCoin21" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(1597, 1114)
+
+[node name="GoldCoin22" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(1188, 731)
+
+[node name="GoldCoin23" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(975, 680)
+
+[node name="GoldCoin24" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(1413, 719)
+
+[node name="GoldCoin25" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(1475, 591)
+
+[node name="GoldCoin26" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(193, 762)
+
+[node name="GoldCoin27" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(1408, 922)
+
+[node name="GoldCoin28" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(1801, 1057)
+
+[node name="GoldCoin29" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(795, 1072)
+
+[node name="GoldCoin30" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(987, 940)
+
+[node name="GoldCoin31" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(1180, 602)
+
+[node name="bigshark" parent="." instance=ExtResource("12_b4ec2")]
+position = Vector2(1502, 1480)
+scale = Vector2(2, 2)
+collision_layer = 4
+
+[node name="Area2D" type="Area2D" parent="bigshark"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bigshark/Area2D"]
+position = Vector2(7.66667, 1.66668)
+shape = SubResource("RectangleShape2D_wdbe2")
+
+[node name="bigshark2" parent="." instance=ExtResource("12_b4ec2")]
+position = Vector2(1227, 1332)
+scale = Vector2(2, 2)
+collision_layer = 4
+
+[node name="Area2D" type="Area2D" parent="bigshark2"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bigshark2/Area2D"]
+position = Vector2(7.66667, 1.66668)
+shape = SubResource("RectangleShape2D_wdbe2")
+
+[node name="bigshark3" parent="." instance=ExtResource("12_b4ec2")]
+position = Vector2(1661, 1373)
+scale = Vector2(2, 2)
+collision_layer = 4
+
+[node name="Area2D" type="Area2D" parent="bigshark3"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bigshark3/Area2D"]
+position = Vector2(7.66667, 1.66668)
+shape = SubResource("RectangleShape2D_wdbe2")
+
+[node name="bigshark4" parent="." instance=ExtResource("12_b4ec2")]
+position = Vector2(1100, 1472)
+scale = Vector2(2, 2)
+collision_layer = 4
+
+[node name="Area2D" type="Area2D" parent="bigshark4"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bigshark4/Area2D"]
+position = Vector2(7.66667, 1.66668)
+shape = SubResource("RectangleShape2D_wdbe2")
+
+[node name="swordfish9" parent="." instance=ExtResource("8_f0mw1")]
+position = Vector2(745, 1163)
+
+[node name="Area2D" type="Area2D" parent="swordfish9"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="swordfish9/Area2D"]
+position = Vector2(49, 89)
+shape = SubResource("RectangleShape2D_6h8jn")
+
+[node name="swordfish10" parent="." instance=ExtResource("8_f0mw1")]
+position = Vector2(1606, 1150)
+
+[node name="Area2D" type="Area2D" parent="swordfish10"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="swordfish10/Area2D"]
+position = Vector2(49, 89)
+shape = SubResource("RectangleShape2D_6h8jn")
+
+[node name="swordfish11" parent="." instance=ExtResource("8_f0mw1")]
+position = Vector2(1393, 1501)
+
+[node name="Area2D" type="Area2D" parent="swordfish11"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="swordfish11/Area2D"]
+position = Vector2(49, 89)
+shape = SubResource("RectangleShape2D_6h8jn")
+
+[node name="swordfish12" parent="." instance=ExtResource("8_f0mw1")]
+position = Vector2(794, 1596)
+
+[node name="Area2D" type="Area2D" parent="swordfish12"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="swordfish12/Area2D"]
+position = Vector2(49, 89)
+shape = SubResource("RectangleShape2D_6h8jn")
+
+[node name="swordfish13" parent="." instance=ExtResource("8_f0mw1")]
+position = Vector2(863, 1337)
+
+[node name="Area2D" type="Area2D" parent="swordfish13"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="swordfish13/Area2D"]
+position = Vector2(49, 89)
+shape = SubResource("RectangleShape2D_6h8jn")
+
+[node name="GoldCoin32" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(665, 1192)
+
+[node name="GoldCoin33" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(918, 1296)
+
+[node name="GoldCoin34" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(699, 1346)
+
+[node name="GoldCoin35" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(718, 1517)
+
+[node name="GoldCoin36" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(809, 1495)
+
+[node name="GoldCoin37" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(975, 1563)
+
+[node name="GoldCoin38" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(920, 1722)
+
+[node name="GoldCoin39" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(725, 1655)
+
+[node name="GoldCoin40" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(1157, 1193)
+
+[node name="GoldCoin41" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(1327, 1650)
+
+[node name="GoldCoin42" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(1492, 1643)
+
+[node name="GoldCoin43" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(1496, 1297)
+
+[node name="GoldCoin44" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(1988, 1391)
+
+[node name="GoldCoin45" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(1935, 1283)
+
+[node name="GoldCoin46" parent="." instance=ExtResource("2_06mf6")]
+position = Vector2(1999, 1247)
 
 [connection signal="body_entered" from="RedFish/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="RedFish2/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="RedFish3/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="RedFish4/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="RedFish5/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="RedFish6/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="RedFish7/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="RedFish8/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="RedFish9/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="RedFish10/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="RedFish11/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="RedFish12/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="RedFish13/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="RedFish14/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="RedFish15/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="jellyfish/Area2D2" to="Maincharacter" method="_on_area_2d_2_body_entered"]
 [connection signal="body_entered" from="jellyfish2/Area2D2" to="Maincharacter" method="_on_area_2d_2_body_entered"]
 [connection signal="body_entered" from="jellyfish3/Area2D2" to="Maincharacter" method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="jellyfish4/Area2D2" to="Maincharacter" method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="jellyfish5/Area2D2" to="Maincharacter" method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="jellyfish6/Area2D2" to="Maincharacter" method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="jellyfish7/Area2D2" to="Maincharacter" method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="jellyfish8/Area2D2" to="Maincharacter" method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="jellyfish9/Area2D2" to="Maincharacter" method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="swordfish/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="swordfish2/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="swordfish3/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="swordfish4/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="swordfish5/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="swordfish6/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="swordfish7/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="swordfish8/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="jellyfish10/Area2D2" to="Maincharacter" method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="jellyfish11/Area2D2" to="Maincharacter" method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="jellyfish12/Area2D2" to="Maincharacter" method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="jellyfish13/Area2D2" to="Maincharacter" method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="jellyfish14/Area2D2" to="Maincharacter" method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="bigshark/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="bigshark2/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="bigshark3/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="bigshark4/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="swordfish9/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="swordfish10/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="swordfish11/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="swordfish12/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="swordfish13/Area2D" to="Maincharacter" method="_on_area_2d_body_entered"]

@@ -10,7 +10,7 @@ extends CharacterBody2D
 const SWIM_SPEED = 1000  # Adjust this value to make swimming slower
 const DRAG = 0.9  # Simulates water resistance (higher value means less inertia)
 const BUOYANCY = -30  # Buoyancy to slowly pull player upward when idle
-var HP = 11
+var HP = 25
 
 
 
@@ -21,8 +21,11 @@ func _ready():
 	add_to_group("Player")
 
 func gameOver():
-	# Optional: Play a death animation or sound here
-	get_tree().reload_current_scene()  # Reloads the current scene
+	# Reset HP to maximum
+	HP = 25
+	# Reload the scene
+	get_tree().reload_current_scene()
+
 	
 func healthDown():
 	HP -= 1
@@ -70,9 +73,9 @@ func _physics_process(delta):
 	move_and_slide()
 	
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
+func _on_area_2d_body_entered(CharacterBody2D) -> void:
 	healthDown()
 
 
-func _on_area_2d_2_body_entered(body: Node2D) -> void:
+func _on_area_2d_2_body_entered(CharacterBody2D) -> void:
 	healthDown()

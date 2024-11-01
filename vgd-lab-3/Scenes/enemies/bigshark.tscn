@@ -124,7 +124,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3psrr"]
-size = Vector2(35.4053, 20.449)
+size = Vector2(24.9097, 15.4288)
 
 [node name="bigshark" type="CharacterBody2D"]
 position = Vector2(62, 175)
@@ -139,6 +139,6 @@ frame = 15
 frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2.97959, 0.392853)
+position = Vector2(8.18182, 0.909094)
 scale = Vector2(2.2, 2.2)
 shape = SubResource("RectangleShape2D_3psrr")

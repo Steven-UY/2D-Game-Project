@@ -4,7 +4,7 @@ var speed = 100
 var direction: int = 1  # 1 for down, -1 for up
 var max_distance = 70  # Maximum distance to move in one direction
 var start_position: Vector2  # Starting position of the character
-var health = 10
+
 
 func _ready() -> void:
 	# Store the initial position to calculate distance
