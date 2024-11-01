@@ -10,7 +10,7 @@ extends CharacterBody2D
 const SWIM_SPEED = 1000  # Adjust this value to make swimming slower
 const DRAG = 0.9  # Simulates water resistance (higher value means less inertia)
 const BUOYANCY = -30  # Buoyancy to slowly pull player upward when idle
-var HP = 10
+var HP = 11
 
 
 
@@ -71,4 +71,8 @@ func _physics_process(delta):
 	
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
+	healthDown()
+
+
+func _on_area_2d_2_body_entered(body: Node2D) -> void:
 	healthDown()
