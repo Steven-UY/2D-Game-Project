@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cagd5ov2do2ty" path="res://Assets/SpearFishing Assets Pack/Sprites/JellyFish - 32x16/JellyFish.png" id="2_vfeot"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h8a6g"]
+size = Vector2(8.25, 12.5)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cg6re"]
 atlas = ExtResource("2_vfeot")
@@ -45,12 +46,12 @@ animations = [{
 script = ExtResource("1_xqu54")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(45, 35)
+position = Vector2(104, 46)
 scale = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_h8a6g")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(44, 35)
+position = Vector2(103, 48)
 rotation = -1.5708
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_0ijpo")
