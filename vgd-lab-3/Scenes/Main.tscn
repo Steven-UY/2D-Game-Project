@@ -99,7 +99,7 @@ position = Vector2(1451, 298)
 
 [node name="RedFish" parent="." instance=ExtResource("4_1navu")]
 position = Vector2(151, 181)
-scale = Vector2(2, 2)
+scale = Vector2(1.5, 1.5)
 collision_mask = 1
 
 [node name="Area2D" type="Area2D" parent="RedFish"]
@@ -107,11 +107,12 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RedFish/Area2D"]
+scale = Vector2(0.8, 0.8)
 shape = SubResource("CircleShape2D_5dy8i")
 
 [node name="RedFish2" parent="." instance=ExtResource("4_1navu")]
 position = Vector2(270, 320)
-scale = Vector2(2, 2)
+scale = Vector2(1.5, 1.5)
 collision_mask = 1
 
 [node name="Area2D" type="Area2D" parent="RedFish2"]
@@ -119,11 +120,12 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RedFish2/Area2D"]
+scale = Vector2(0.8, 0.8)
 shape = SubResource("CircleShape2D_5dy8i")
 
 [node name="RedFish3" parent="." instance=ExtResource("4_1navu")]
 position = Vector2(-6, 289)
-scale = Vector2(2, 2)
+scale = Vector2(1.5, 1.5)
 collision_mask = 1
 
 [node name="Area2D" type="Area2D" parent="RedFish3"]
@@ -131,11 +133,12 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RedFish3/Area2D"]
+scale = Vector2(0.8, 0.8)
 shape = SubResource("CircleShape2D_5dy8i")
 
 [node name="RedFish4" parent="." instance=ExtResource("4_1navu")]
 position = Vector2(190, 421)
-scale = Vector2(2, 2)
+scale = Vector2(1.5, 1.5)
 collision_mask = 1
 
 [node name="Area2D" type="Area2D" parent="RedFish4"]
@@ -143,11 +146,12 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RedFish4/Area2D"]
+scale = Vector2(0.8, 0.8)
 shape = SubResource("CircleShape2D_5dy8i")
 
 [node name="RedFish5" parent="." instance=ExtResource("4_1navu")]
 position = Vector2(437, 477)
-scale = Vector2(2, 2)
+scale = Vector2(1.5, 1.5)
 collision_mask = 1
 
 [node name="Area2D" type="Area2D" parent="RedFish5"]
@@ -155,11 +159,12 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RedFish5/Area2D"]
+scale = Vector2(0.8, 0.8)
 shape = SubResource("CircleShape2D_5dy8i")
 
 [node name="RedFish6" parent="." instance=ExtResource("4_1navu")]
 position = Vector2(591, 430)
-scale = Vector2(2, 2)
+scale = Vector2(1.5, 1.5)
 collision_mask = 1
 
 [node name="Area2D" type="Area2D" parent="RedFish6"]
@@ -167,11 +172,12 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RedFish6/Area2D"]
+scale = Vector2(0.8, 0.8)
 shape = SubResource("CircleShape2D_5dy8i")
 
 [node name="RedFish7" parent="." instance=ExtResource("4_1navu")]
 position = Vector2(739, 469)
-scale = Vector2(2, 2)
+scale = Vector2(1.5, 1.5)
 collision_mask = 1
 
 [node name="Area2D" type="Area2D" parent="RedFish7"]
@@ -179,11 +185,12 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RedFish7/Area2D"]
+scale = Vector2(0.8, 0.8)
 shape = SubResource("CircleShape2D_5dy8i")
 
 [node name="RedFish8" parent="." instance=ExtResource("4_1navu")]
 position = Vector2(860, 355)
-scale = Vector2(2, 2)
+scale = Vector2(1.5, 1.5)
 collision_mask = 1
 
 [node name="Area2D" type="Area2D" parent="RedFish8"]
@@ -191,11 +198,12 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RedFish8/Area2D"]
+scale = Vector2(0.8, 0.8)
 shape = SubResource("CircleShape2D_5dy8i")
 
 [node name="RedFish9" parent="." instance=ExtResource("4_1navu")]
 position = Vector2(902, 170)
-scale = Vector2(2, 2)
+scale = Vector2(1.5, 1.5)
 collision_mask = 1
 
 [node name="Area2D" type="Area2D" parent="RedFish9"]
@@ -203,11 +211,12 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RedFish9/Area2D"]
+scale = Vector2(0.8, 0.8)
 shape = SubResource("CircleShape2D_5dy8i")
 
 [node name="RedFish10" parent="." instance=ExtResource("4_1navu")]
 position = Vector2(1135, 301)
-scale = Vector2(2, 2)
+scale = Vector2(1.5, 1.5)
 collision_mask = 1
 
 [node name="Area2D" type="Area2D" parent="RedFish10"]
@@ -215,11 +224,12 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RedFish10/Area2D"]
+scale = Vector2(0.8, 0.8)
 shape = SubResource("CircleShape2D_5dy8i")
 
 [node name="RedFish11" parent="." instance=ExtResource("4_1navu")]
 position = Vector2(1178, 133)
-scale = Vector2(2, 2)
+scale = Vector2(1.5, 1.5)
 collision_mask = 1
 
 [node name="Area2D" type="Area2D" parent="RedFish11"]
@@ -227,11 +237,12 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RedFish11/Area2D"]
+scale = Vector2(0.8, 0.8)
 shape = SubResource("CircleShape2D_5dy8i")
 
 [node name="RedFish12" parent="." instance=ExtResource("4_1navu")]
 position = Vector2(1241, 409)
-scale = Vector2(2, 2)
+scale = Vector2(1.5, 1.5)
 collision_mask = 1
 
 [node name="Area2D" type="Area2D" parent="RedFish12"]
@@ -239,11 +250,12 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RedFish12/Area2D"]
+scale = Vector2(0.8, 0.8)
 shape = SubResource("CircleShape2D_5dy8i")
 
 [node name="RedFish13" parent="." instance=ExtResource("4_1navu")]
 position = Vector2(744, 55)
-scale = Vector2(2, 2)
+scale = Vector2(1.5, 1.5)
 collision_mask = 1
 
 [node name="Area2D" type="Area2D" parent="RedFish13"]
@@ -251,11 +263,12 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RedFish13/Area2D"]
+scale = Vector2(0.8, 0.8)
 shape = SubResource("CircleShape2D_5dy8i")
 
 [node name="RedFish14" parent="." instance=ExtResource("4_1navu")]
 position = Vector2(414, 82)
-scale = Vector2(2, 2)
+scale = Vector2(1.5, 1.5)
 collision_mask = 1
 
 [node name="Area2D" type="Area2D" parent="RedFish14"]
@@ -263,11 +276,12 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RedFish14/Area2D"]
+scale = Vector2(0.8, 0.8)
 shape = SubResource("CircleShape2D_5dy8i")
 
 [node name="RedFish15" parent="." instance=ExtResource("4_1navu")]
 position = Vector2(1185, 36)
-scale = Vector2(2, 2)
+scale = Vector2(1.5, 1.5)
 collision_mask = 1
 
 [node name="Area2D" type="Area2D" parent="RedFish15"]
@@ -275,10 +289,12 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RedFish15/Area2D"]
+scale = Vector2(0.8, 0.8)
 shape = SubResource("CircleShape2D_5dy8i")
 
 [node name="jellyfish" parent="." instance=ExtResource("6_0hpgi")]
 position = Vector2(29, 258)
+scale = Vector2(0.7, 0.7)
 
 [node name="Area2D2" type="Area2D" parent="jellyfish"]
 collision_layer = 4
@@ -290,6 +306,7 @@ shape = SubResource("RectangleShape2D_51joe")
 
 [node name="jellyfish2" parent="." instance=ExtResource("6_0hpgi")]
 position = Vector2(246, 332)
+scale = Vector2(0.7, 0.7)
 
 [node name="Area2D2" type="Area2D" parent="jellyfish2"]
 position = Vector2(5, -5)
@@ -302,6 +319,7 @@ shape = SubResource("RectangleShape2D_6hyu5")
 
 [node name="jellyfish3" parent="." instance=ExtResource("6_0hpgi")]
 position = Vector2(175, 459)
+scale = Vector2(0.7, 0.7)
 
 [node name="Area2D2" type="Area2D" parent="jellyfish3"]
 position = Vector2(5, -5)
@@ -314,6 +332,7 @@ shape = SubResource("RectangleShape2D_6hyu5")
 
 [node name="jellyfish4" parent="." instance=ExtResource("6_0hpgi")]
 position = Vector2(552, 78)
+scale = Vector2(0.7, 0.7)
 
 [node name="Area2D2" type="Area2D" parent="jellyfish4"]
 position = Vector2(5, -5)
@@ -326,6 +345,7 @@ shape = SubResource("RectangleShape2D_6hyu5")
 
 [node name="jellyfish5" parent="." instance=ExtResource("6_0hpgi")]
 position = Vector2(803, 47)
+scale = Vector2(0.7, 0.7)
 
 [node name="Area2D2" type="Area2D" parent="jellyfish5"]
 position = Vector2(5, -5)
@@ -338,6 +358,7 @@ shape = SubResource("RectangleShape2D_6hyu5")
 
 [node name="jellyfish6" parent="." instance=ExtResource("6_0hpgi")]
 position = Vector2(933, 212)
+scale = Vector2(0.7, 0.7)
 
 [node name="Area2D2" type="Area2D" parent="jellyfish6"]
 position = Vector2(5, -5)
@@ -350,6 +371,7 @@ shape = SubResource("RectangleShape2D_6hyu5")
 
 [node name="jellyfish7" parent="." instance=ExtResource("6_0hpgi")]
 position = Vector2(1218, 169)
+scale = Vector2(0.7, 0.7)
 
 [node name="Area2D2" type="Area2D" parent="jellyfish7"]
 position = Vector2(5, -5)
@@ -362,6 +384,7 @@ shape = SubResource("RectangleShape2D_6hyu5")
 
 [node name="jellyfish8" parent="." instance=ExtResource("6_0hpgi")]
 position = Vector2(1309, 333)
+scale = Vector2(0.7, 0.7)
 
 [node name="Area2D2" type="Area2D" parent="jellyfish8"]
 position = Vector2(5, -5)
@@ -415,6 +438,7 @@ text = "00:00"
 
 [node name="jellyfish9" parent="." instance=ExtResource("6_0hpgi")]
 position = Vector2(819, 564)
+scale = Vector2(0.7, 0.7)
 
 [node name="Area2D2" type="Area2D" parent="jellyfish9"]
 position = Vector2(5, -5)
@@ -515,6 +539,7 @@ shape = SubResource("RectangleShape2D_6h8jn")
 
 [node name="jellyfish10" parent="." instance=ExtResource("6_0hpgi")]
 position = Vector2(1058, 831)
+scale = Vector2(0.7, 0.7)
 
 [node name="Area2D2" type="Area2D" parent="jellyfish10"]
 position = Vector2(5, -5)
@@ -527,6 +552,7 @@ shape = SubResource("RectangleShape2D_6hyu5")
 
 [node name="jellyfish11" parent="." instance=ExtResource("6_0hpgi")]
 position = Vector2(476, 580)
+scale = Vector2(0.7, 0.7)
 
 [node name="Area2D2" type="Area2D" parent="jellyfish11"]
 position = Vector2(5, -5)
@@ -539,6 +565,7 @@ shape = SubResource("RectangleShape2D_6hyu5")
 
 [node name="jellyfish12" parent="." instance=ExtResource("6_0hpgi")]
 position = Vector2(339, 812)
+scale = Vector2(0.7, 0.7)
 
 [node name="Area2D2" type="Area2D" parent="jellyfish12"]
 position = Vector2(5, -5)
@@ -551,6 +578,7 @@ shape = SubResource("RectangleShape2D_6hyu5")
 
 [node name="jellyfish13" parent="." instance=ExtResource("6_0hpgi")]
 position = Vector2(1432, 827)
+scale = Vector2(0.7, 0.7)
 
 [node name="Area2D2" type="Area2D" parent="jellyfish13"]
 position = Vector2(5, -5)
@@ -563,6 +591,7 @@ shape = SubResource("RectangleShape2D_6hyu5")
 
 [node name="jellyfish14" parent="." instance=ExtResource("6_0hpgi")]
 position = Vector2(520, 1015)
+scale = Vector2(0.7, 0.7)
 
 [node name="Area2D2" type="Area2D" parent="jellyfish14"]
 position = Vector2(5, -5)
@@ -629,7 +658,7 @@ position = Vector2(1180, 602)
 
 [node name="bigshark" parent="." instance=ExtResource("12_b4ec2")]
 position = Vector2(1502, 1480)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 collision_layer = 4
 
 [node name="Area2D" type="Area2D" parent="bigshark"]
@@ -642,7 +671,7 @@ shape = SubResource("RectangleShape2D_wdbe2")
 
 [node name="bigshark2" parent="." instance=ExtResource("12_b4ec2")]
 position = Vector2(1227, 1332)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 collision_layer = 4
 
 [node name="Area2D" type="Area2D" parent="bigshark2"]
@@ -655,7 +684,7 @@ shape = SubResource("RectangleShape2D_wdbe2")
 
 [node name="bigshark3" parent="." instance=ExtResource("12_b4ec2")]
 position = Vector2(1661, 1373)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 collision_layer = 4
 
 [node name="Area2D" type="Area2D" parent="bigshark3"]
@@ -668,7 +697,7 @@ shape = SubResource("RectangleShape2D_wdbe2")
 
 [node name="bigshark4" parent="." instance=ExtResource("12_b4ec2")]
 position = Vector2(1100, 1472)
-scale = Vector2(2, 2)
+scale = Vector2(1.7, 1.7)
 collision_layer = 4
 
 [node name="Area2D" type="Area2D" parent="bigshark4"]
