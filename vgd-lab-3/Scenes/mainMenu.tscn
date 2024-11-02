@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://chd53435mh661" path="res://Assets/BunchOfRocks_Pack/RockPack128x128.png" id="5_6reqv"]
 [ext_resource type="PackedScene" uid="uid://xa0j137r4jkk" path="res://Scenes/GreenCyanCoral.tscn" id="6_hyrl2"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0lxqe"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wlhaw"]
 texture = ExtResource("2_ymrql")
 2:0/0 = 0
 3:0/0 = 0
@@ -408,7 +408,7 @@ texture = ExtResource("2_ymrql")
 1:27/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_1a16e"]
-sources/0 = SubResource("TileSetAtlasSource_0lxqe")
+sources/0 = SubResource("TileSetAtlasSource_wlhaw")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kgrdb"]
 texture = ExtResource("2_ymrql")
