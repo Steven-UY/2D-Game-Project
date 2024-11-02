@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://w7ty1bnhv1ri"]
+[gd_scene load_steps=9 format=3 uid="uid://w7ty1bnhv1ri"]
 
 [ext_resource type="Script" path="res://Scripts/maincharacter.gd" id="1_pmeiv"]
 [ext_resource type="Texture2D" uid="uid://b6ci525q6np6a" path="res://Assets/SpearFishing Assets Pack/Sprites/Diver-32x32/Diver 6.png" id="2_mwdpp"]
+[ext_resource type="AudioStream" uid="uid://b1erht0n38hbr" path="res://audio/water-bubbles-257594.mp3" id="3_wwteg"]
+[ext_resource type="AudioStream" uid="uid://22qe3jhrhh2n" path="res://audio/maringa-conga-246609.mp3" id="4_im607"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sv6ls"]
 size = Vector2(12, 29)
@@ -76,3 +78,14 @@ position_smoothing_speed = 3.0
 libraries = {
 "": SubResource("AnimationLibrary_gtqqa")
 }
+
+[node name="bubbles" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_wwteg")
+volume_db = -1.0
+pitch_scale = 0.5
+autoplay = true
+
+[node name="music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_im607")
+volume_db = 1.0
+autoplay = true
