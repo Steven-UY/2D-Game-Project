@@ -12,6 +12,6 @@ func _process(delta) -> void:
 
 func _on_area_2d_body_entered(_body: CharacterBody2D) -> void:
 	if _body.is_in_group('Player'):
-		Global.add_score(5)
+		Global.add_score(1)
 		Global.coins_collected()
 		queue_free()

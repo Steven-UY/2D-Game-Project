@@ -21,10 +21,11 @@ func _ready():
 	add_to_group("Player")
 
 func gameOver():
-	# Reset HP to maximum
+	# Reset HP to maximum and reset score
 	HP = 25
+	Global.reset()
 	# Reload the scene
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://deathScreen.tscn")
 
 	
 func healthDown():
