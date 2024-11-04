@@ -25,4 +25,12 @@ theme_override_font_sizes/font_size = 30
 text = "Play Again
 "
 
+[node name="Button2" type="Button" parent="."]
+offset_left = 518.0
+offset_top = 376.0
+offset_right = 674.0
+offset_bottom = 407.0
+text = "Go to Main Menu"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
