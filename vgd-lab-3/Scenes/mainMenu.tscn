@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://borv5m01hhg1x"]
+[gd_scene load_steps=15 format=4 uid="uid://borv5m01hhg1x"]
 
 [ext_resource type="Script" path="res://main_menu.gd" id="1_dn4s7"]
 [ext_resource type="Texture2D" uid="uid://bm242c7i1pp72" path="res://Assets/watertileset.png" id="2_ymrql"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b1f8eoq8mwx3" path="res://Scenes/PinkGreencCorals.tscn" id="4_xkr82"]
 [ext_resource type="Texture2D" uid="uid://chd53435mh661" path="res://Assets/BunchOfRocks_Pack/RockPack128x128.png" id="5_6reqv"]
 [ext_resource type="PackedScene" uid="uid://xa0j137r4jkk" path="res://Scenes/GreenCyanCoral.tscn" id="6_hyrl2"]
+[ext_resource type="AudioStream" uid="uid://22qe3jhrhh2n" path="res://audio/maringa-conga-246609.mp3" id="8_ksrf1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wlhaw"]
 texture = ExtResource("2_ymrql")
@@ -1072,6 +1073,10 @@ scale = Vector2(2.34524, 2.20758)
 texture = ExtResource("5_6reqv")
 region_enabled = true
 region_rect = Rect2(98.6288, 58.6868, 27.4261, 30.4317)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_ksrf1")
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/HowToPlay" to="." method="_on_how_to_play_pressed"]

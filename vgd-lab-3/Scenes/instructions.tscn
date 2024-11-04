@@ -1013,19 +1013,19 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -226.0
-offset_top = 26.0
-offset_right = 226.0
-offset_bottom = 168.0
+offset_left = -193.0
+offset_top = 26.5
+offset_right = 259.0
+offset_bottom = 235.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/default_color = Color(0.726349, 0.847119, 0.940515, 1)
 theme_override_font_sizes/normal_font_size = 20
-text = "Use WASD to make your character swim
+text = "Use WASD to make your character swim.
 
-Avoid getting hurt by dangerous sea creatures
+Avoid getting hurt by dangerous sea creatures, you have 10 lives.
 
-Collect as many coins as you can!"
+Collect all of the coins to win!"
 
 [node name="water" type="TileMapLayer" parent="."]
 modulate = Color(0.517647, 0.780392, 0.992157, 1)
